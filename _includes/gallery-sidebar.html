@@ -1,0 +1,91 @@
+{% assign current = page.url | downcase | split: '/' %}
+{% if page.pictured %}
+{% assign pictured = site.data.pictured[page.pictured] %}
+{% else %}
+{% assign type = page.gallery[0].type %}
+{% assign pictured = site.data.pictured[type] %}
+{% endif %}
+<div class="row columns show-for-medium">
+  <h2 class="medium color-primary show-for-large" style="font-size: 18px; margin: 29px 0 10px">SHARE THIS GALLERY</h2>
+  <div class="social-share-container show-for-large">
+    <a target="_blank" class="social-share-facebook" href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}&amp;t=Norstone+USA">Facebook</a>
+    <a target="_blank" class="social-share-twitter" href="https://twitter.com/intent/tweet?text=Norstone+USA&amp;url={{ site.url }}{{ page.url }}">Twitter</a>
+  </div>
+</div>
+<div class="row small-up-2 large-up-1">
+  <div class="column pictured-product" style="margin-bottom: 20px">
+    <h2 class="medium color-primary" style="font-size: 18px; margin-bottom: 10px">PICTURED PRODUCT</h2>
+    <div class="card">
+      <a class="card--image" href="{{ pictured.link }}"><img src="{{ pictured.image }}" class="orbit-image" alt="{{ pictured.title }}" title="{{ pictured.title }}"></a>
+      <div><a class="card--title color-primary" href="{{ pictured.link }}">{{ pictured.title | upcase }}</a></div>
+      <a class="x-small color-secondary" style="background: url('/assets/images/theme/bg-link-arrows.png') no-repeat center right; display: block" href="{{ pictured.link }}">Visit Product Page</a>
+    </div>
+  </div>
+  <div class="column">
+    <h2 class="medium color-primary" style="font-size: 18px; margin-bottom: 10px">ADDITIONAL GALLERIES</h2>
+    <div class="gallery-drop">
+      <select>
+        {% if current[2] == 'application' %}
+        <option disabled="" selected="">Select Another Application</option>
+        <option {% if current[3] == 'backsplash' %} selected="selected"{% endif %}value="/gallery/application/backsplash/">Backsplashes</option>
+        <option {% if current[3] == 'exteriors' %} selected="selected"{% endif %}value="/gallery/application/exteriors/">Exteriors</option>
+        <option {% if current[3] == 'natural-stone-feature-walls' %} selected="selected"{% endif %}value="/gallery/application/natural-stone-feature-walls/">Feature Walls</option>
+        <option {% if current[3] == 'fireplace' %} selected="selected"{% endif %}value="/gallery/application/fireplace/">Fireplaces</option>
+        <option {% if current[3] == 'interiors' %} selected="selected"{% endif %}value="/gallery/application/interiors/">Interiors</option>
+        <option {% if current[3] == 'kitchen' %} selected="selected"{% endif %}value="/gallery/application/kitchen/">Kitchens</option>
+        <option {% if current[3] == 'pools' %} selected="selected"{% endif %}value="/gallery/application/pools/">Pools</option>
+        <option {% if current[3] == 'showers' %} selected="selected"{% endif %}value="/gallery/application/showers/">Showers</option>
+        {% elsif current[2] == 'project' %}
+        <option disabled="" selected="">Select Another Project</option>
+        <optgroup label="Commercial">
+          <option {% if current[3] == 'architects-office' %} selected="selected"{% endif %}value="/gallery/project/architects-office/">Architectural Interior</option>
+          <option {% if current[3] == 'rockport-performing-arts' %} selected="selected"{% endif %}value="/gallery/project/rockport/">Rockport Performing Arts</option>
+          <option {% if current[3] == 'stanmore-residential-complex' %} selected="selected"{% endif %}value="/gallery/project/stanmore-residential-complex/">Stanmore Place</option>
+          <option {% if current[3] == 'the-matrix-hotel' %} selected="selected"{% endif %}value="/gallery/project/the-matrix-hotel/">Matrix Hotel</option>
+        </optgroup>
+        <optgroup label="Residential">
+          <option {% if current[3] == 'niagara-residence' %} selected="selected"{% endif %}value="/gallery/project/modern-stacked-stone-residence/">Niagara Residence</option>
+          <option {% if current[3] == 'berkshire-residence' %} selected="selected"{% endif %}value="/gallery/project/berkshire-residence/">Berkshire Residence</option>
+          <option {% if current[3] == 'horsen-house' %} selected="selected"{% endif %}value="/gallery/project/horsen-house/">Denmark Modern Enclave</option>
+          <option {% if current[3] == 'outdoor-living-in-cyprus' %} selected="selected"{% endif %}value="/gallery/project/ivory-natural-stone-walls/">Outdoor Living in Cyprus</option>
+          <option {% if current[3] == 'virginia-treehouse-retreat' %} selected="selected"{% endif %}value="/gallery/project/virginia-treehouse-retreat/">Treehouse Retreat</option>
+          <option {% if current[3] == 'basement-retreat' %} selected="selected"{% endif %}value="/gallery/project/stacked-stone-interior-basement-walls/">Basement Retreat</option>
+        </optgroup>
+        {% elsif current[2] == 'rock-panels' or current[2] == 'xlx-rock-panels' or current[2] == 'basalt-il-tiles' or current[2] == 'basalt-3d' %}
+        <optgroup label="Rock Panel">
+            <option {% if current[2] == 'rock-panels' and current[3] == 'interiors' %} selected="selected"{% endif %}value="/gallery/rock-panels/interiors/">Interiors</option>
+            <option {% if current[2] == 'rock-panels' and current[3] == 'exteriors' %} selected="selected"{% endif %}value="/gallery/rock-panels/exteriors/">Exteriors</option>
+            <option {% if current[2] == 'rock-panels' and current[3] == 'ochre' %} selected="selected"{% endif %}value="/gallery/rock-panels/ochre/">Ochre</option>
+            <option {% if current[2] == 'rock-panels' and current[3] == 'charcoal' %} selected="selected"{% endif %}value="/gallery/rock-panels/charcoal/">Charcoal</option>
+            <option {% if current[2] == 'rock-panels' and current[3] == 'ivory' %} selected="selected"{% endif %}value="/gallery/rock-panels/ivory/">Ivory</option>
+            <option {% if current[2] == 'rock-panels' and current[3] == 'white' %} selected="selected"{% endif %}value="/gallery/rock-panels/white/">White</option>
+        </optgroup>
+        <optgroup label="XL Rock Panel">
+            <option {% if current[2] == 'xlx-rock-panels' and current[3] == 'interiors' %} selected="selected"{% endif %}value="/gallery/xlx-rock-panels/interiors/">Interiors</option>
+            <option {% if current[2] == 'xlx-rock-panels' and current[3] == 'exteriors' %} selected="selected"{% endif %}value="/gallery/xlx-rock-panels/exteriors/">Exteriors</option>
+            <option {% if current[2] == 'xlx-rock-panels' and current[3] == 'ochre' %} selected="selected"{% endif %}value="/gallery/xlx-rock-panels/ochre/">Ochre</option>
+            <option {% if current[2] == 'xlx-rock-panels' and current[3] == 'charcoal' %} selected="selected"{% endif %}value="/gallery/xlx-rock-panels/charcoal/">Charcoal</option>
+            <option {% if current[2] == 'xlx-rock-panels' and current[3] == 'aztec' %} selected="selected"{% endif %}value="/gallery/xlx-rock-panels/aztec/">Aztec</option>
+        </optgroup>
+        <optgroup label="Basalt IL Tiles">
+            <option {% if current[2] == 'basalt-il-tiles' and current[3] == 'interiors' %} selected="selected"{% endif %}value="/gallery/basalt-il-tiles/interiors/">Interiors</option>
+            <option {% if current[2] == 'basalt-il-tiles' and current[3] == 'exteriors' %} selected="selected"{% endif %}value="/gallery/basalt-il-tiles/exteriors/">Exteriors</option>
+            <option {% if current[2] == 'basalt-il-tiles' and current[3] == 'grey' %} selected="selected"{% endif %}value="/gallery/basalt-il-tiles/grey/">Ash Grey</option>
+            <option {% if current[2] == 'basalt-il-tiles' and current[3] == 'ebony' %} selected="selected"{% endif %}value="/gallery/basalt-il-tiles/ebony/">Ebony</option>
+        </optgroup>
+        <optgroup label="Basalt 3D">
+            <option {% if current[2] == 'basalt-3d' and current[3] == 'interiors' %} selected="selected"{% endif %}value="/gallery/basalt-3d/interiors/">Interiors</option>
+            <option {% if current[2] == 'basalt-3d' and current[3] == 'exteriors' %} selected="selected"{% endif %}value="/gallery/basalt-3d/exteriors/">Exteriors</option>
+            <option {% if current[2] == 'basalt-3d' and current[3] == 'grey' %} selected="selected"{% endif %}value="/gallery/basalt-3d/grey/">Ash Grey</option>
+            <option {% if current[2] == 'basalt-3d' and current[3] == 'ebony' %} selected="selected"{% endif %}value="/gallery/basalt-3d/ebony/">Ebony</option>
+        </optgroup>
+        {% endif %}
+      </select>
+    </div>
+    <h2 class="medium color-primary hide-for-large" style="font-size: 18px">SHARE THIS GALLERY</h2>
+    <div class="social-share-container hide-for-large">
+      <a target="_blank" class="social-share-facebook" href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}&amp;t=Norstone+USA">Facebook</a>
+      <a target="_blank" class="social-share-twitter" href="https://twitter.com/intent/tweet?text=Norstone+USA&amp;url={{ site.url }}{{ page.url }}">Twitter</a>
+    </div>
+  </div>
+</div>

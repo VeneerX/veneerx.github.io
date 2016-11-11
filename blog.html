@@ -1,0 +1,20 @@
+---
+title: "Norstone Blog: Natural Stone Design Ideas and Projects"
+meta:
+  description: "Get an inside look at Norstone projects, find stone design inspiration, read detailed stone instalation instructions and guides."
+permalink: /blog/
+layout: blog-list
+---
+
+{% for post in site.posts %}
+<article class="clearfix">
+  <header>
+    <h3><a href="{{ post.url }}" class="x-large color-primary">{{ post.title }}</a>
+    <p>Posted on {{ post.date | date: '%B %d' }}</p>
+  </header>
+  {% if post.image %}<img src="{{ post.image }}" alt="Post Image" title="{{ post.image }}" />{% endif %}
+  <p>{{ post.excerpt | strip_html }}</p>
+  <a class="color-secondary float-right" href="{{ post.url }}">read more <img alt="arrow-img" title="arrows-img.png" src="/assets/images/theme/arrows-img.png" /></a>
+</article>
+<hr />
+{% endfor %}

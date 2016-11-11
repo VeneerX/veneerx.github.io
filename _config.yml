@@ -1,0 +1,42 @@
+title: Norstone USA
+description: New dimensions in natural stone.
+url: http://www.norstoneusa.com
+author: Rassan Grant
+markdown: kramdown
+exclude:
+- bower_components
+gems:
+- html-proofer
+- jekyll-feed
+- jekyll-redirect-from
+jekyll_tidy:
+  compress_html: false
+collections:
+  products:
+    output: true
+  colors:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: products
+    values:
+      layout: collection
+  - scope:
+      path: ""
+      type: colors
+    values:
+      layout: collection
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: blog
+      permalink: /blog/:title/
+      classes: blog
+sass:
+  load_paths:
+    - _sass
+    - bower_components/foundation-sites/scss
+    - bower_components/motion-ui/src
+    - bower_components/owl.carousel/src/scss

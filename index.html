@@ -1,0 +1,122 @@
+---
+title: Wood Wall Tiles | Reclaimed Wood Systemsss
+slides:
+- image: /assets/images/unsorted/Rawhide---Nokomis-Residential-Austin-Texas-Reclaimed-Wood-Fireplace-Veneer.jpg
+  image_mobile: /assets/images/unsorted/norstone-stone-veneer-concert-hall.jpg
+  caption: Reclaimed Wood Veneer for Stunning Spaces.
+  link:
+    text: View Our Gallery
+    href: /gallery/
+- image: /assets/images/unsorted/mulberry--white--Residential---los-angeles-design---reclaimed-wood-bedroom.jpg
+  image_mobile: /assets/images/unsorted/norstone-stone-veneer-concert-hall.jpg
+  caption: Reclaimed Wood Walls, Simply Installed.
+  link:
+    text: View Our Products
+    href: /gallery/
+- image: /assets/images/unsorted/rawhide---nokomis---orlando---backsplas.jpg
+  image_mobile: /assets/images/unsorted/norstone-stone-veneer-concert-hall.jpg
+  caption: Reclaimed Wood Backsplashes, Built to Last.
+  link:
+    text: View Install Guide
+    href: /gallery/
+- image: /assets/images/unsorted/Charcoal---Residential---Niagara-Falls-Feature-Home---Stacked-Stone-Facade-3.jpg
+  image_mobile: /assets/images/unsorted/norstone-stone-veneer-concert-hall.jpg
+  caption: Reclaimed Wood Veneer for Stunning Spaces.
+  link:
+    text: View Our Gallery
+    href: /gallery/
+- image: /assets/images/unsorted/parkwood-natural-hardwood-series-upcycled-tile.jpg
+  image_mobile: /assets/images/unsorted/norstone-stone-veneer-concert-hall.jpg
+  caption: Reclaimed Wood Veneer for Stunning Spaces.
+  link:
+    text: View Our Gallery
+    href: /gallery/
+- image: /assets/images/unsorted/Collins-Natural-Barnwood-Series-Reclaimed-Feature-Wall-in-Hotel-Houston-Texas.jpg
+  image_mobile: /assets/images/unsorted/norstone-stone-veneer-concert-hall.jpg
+  caption: Reclaimed Wood Veneer for Stunning Spaces.
+  link:
+    text: View Our Gallery
+    href: /gallery/
+layout: default
+schema:
+  "@context": "http://schema.org"
+  "@type": "Website"
+  "name": "Norstone"
+  "alternateName": "Norstone Veneers"
+  "url": "http://www.NorstoneUSA.com"
+---
+
+<div class="slider-main show-for-small-only" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out; timerDelay: 8000">
+  <ul class="orbit-container">
+    <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span></button>
+    <button class="orbit-next"><span class="show-for-sr">Next Slide</span></button>
+    {% for slide in page.slides %}
+    <li class="{% if forloop.index0==0 %}is-active {% endif %} orbit-slide">
+      <div style="background-image: url('{{ slide.image_mobile }}'); background-repeat: no-repeat"></div>
+      <figcaption class="orbit-caption x-large">
+        <div class="row columns" style="font-family: 'Open Sans'">
+          <a alt="View Norstone Product" class="float-right text-shadow box-shadow-center button--main" href="{{ slide.link.href }}">{{ slide.link.text }}</a>{{ slide.caption }}
+        </div>
+      </figcaption>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="row columns">
+    <nav class="orbit-bullets">
+      {% for slide in page.slides %}
+      <button data-slide="{{ forloop.index0 }}"{% if forloop.index0 == 0 %} class="is-active"{% endif %}><span class="show-for-sr"></span></button>
+      {% endfor %}
+    </nav>
+  </div>
+</div>
+<div class="slider-main show-for-medium" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out; timerDelay: 8000">
+  <ul class="orbit-container">
+    <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span></button>
+    <button class="orbit-next"><span class="show-for-sr">Next Slide</span></button>
+    {% for slide in page.slides %}
+    <li class="{% if forloop.index0==0 %}is-active {% endif %} orbit-slide">
+      <div style="background-image: url('{{ slide.image }}'); background-repeat: no-repeat"></div>
+      <figcaption class="orbit-caption x-large">
+        <div class="row columns" style="font-family: 'Open Sans'">
+          <a alt="View Norstone Product" class="float-right text-shadow box-shadow-center button--main" href="{{ slide.link.href }}">{{ slide.link.text }}</a>{{ slide.caption }}
+        </div>
+      </figcaption>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="row columns">
+    <nav class="orbit-bullets">
+      {% for slide in page.slides %}
+      <button data-slide="{{ forloop.index0 }}"{% if forloop.index0 == 0 %} class="is-active"{% endif %}><span class="show-for-sr"></span></button>
+      {% endfor %}
+    </nav>
+  </div>
+</div>
+<div class="row">
+  <div class="medium-4 columns" style="background: url(/assets/images/theme/divider-vertical.png) no-repeat center right scroll transparent; margin-bottom: 30px">
+    <h2><a href="/products/stacked-stone-cladding" class="medium color-primary" style="font-size: 22px">Reclaimed Wood Panel System</a></h2>
+    <p>Everitt & Schilling <em>Reclaimed Wood Wall Tiles</em> are a proven <a href="/products/stacked-stone-cladding">wood veneer panel</a> system. Offering <a href="/how-to-install-stacked-stone/">lighting-quick installation</a>, our wood tiles are perfectly suited to interior & exterior design for both residential & commercial projects. Reclaimed Wood has never been easier to work with than they are with our Reclaimed Wood Wall Tiles.</p>
+    <p class="text-center">
+      <a href="/products/stacked-stone-cladding"><img class="orbit-image" src="/assets/images/unsorted/Norstone-Ochre-Blend-Rock-Panel-Stacked-Stone-Veneer-Panel.png" title="Norstone Ochre Blend Stacked Stone Veneer" alt="Norstone Ochre Blend Stacked Stone Veneer for Feature Walls, Fireplaces, Backsplashes, and Retaining Walls" /></a>
+    </p>
+    <a href="/products/stacked-stone-cladding" title="View Norstone's Rock Panel System" class="x-small color-secondary float-right">View Our Rock Panel System <img width="12" height="9" src="/assets/images/theme/arrows-img.png" alt="arrows-img" title="arrows-img.png" /></a>
+  </div>
+  <div class="medium-4 columns" style="background: url(/assets/images/theme/divider-vertical.png) no-repeat center right scroll transparent; margin-bottom: 30px">
+    <h2><a href="/gallery/project" class="medium color-primary" style="font-size: 22px">E&S's Featured Projects</a></h2>
+    <p>Everitt & Schilling's <a href="/products">Decorative Reclaimed Wood wall</a> cladding products are used extensively throughout the world to create innovative designs for <a href="/gallery/application/pools/">water features</a>,
+      <a href="/gallery/application/natural-stone-feature-walls">feature walls</a>, <a href="/gallery/application/fireplace">stacked stone tile fireplaces</a>, <a href="/gallery/application/backsplash/">backsplashes</a> and masonry landscape walls. Browse our <a href="/gallery/project/">Featured Projects Gallery</a> to see some of our most distinguished work.</p>
+    <p class="text-center">
+      <a href="/gallery/project"><img class="orbit-image" src="/assets/images/unsorted/Norstone-Stacked-Stone-Veneer-Used-In-Commercial-Buildings.jpg" title="Norstone Natural Stone Ledgestone Veneer for Commercial Buildings" alt="Norstone Natural Stone Ledgestone Veneer for Commercial Buildings and Facades" /></a>
+    </p>
+    <a href="/gallery/project" title="View Collection" class="x-small color-secondary float-right">View Our Featured Projects Gallery <img width="12" height="9" src="/assets/images/theme/arrows-img.png" alt="arrows-img" title="arrows-img.png" /></a>
+  </div>
+  <div class="medium-4 columns" style="margin-bottom: 30px">
+    <h2><a href="/products/modern-wall-tile" class="medium color-primary" style="font-size: 22px"><img width="41" height="15" src="/assets/images/unsorted/NEW3.png" alt="Basalt Tiles" title="NEW3.png" /> Ember Wood Wall Tiles</a></h2>
+    <p>Everitt & Schilling is excited to announce its latest creation, the Ember Wood Wall Series. Hewn from the same material as our <a href="/products/modern-wall-tile">Rawhide Flats</a>, the modern styling of our Ember Flats series is perfect for
+      <a href="/gallery/application/kitchen/">feature walls</a>, backsplashes, and contemporary powder rooms. Our Ember series was inspired by the ancient Japenese art of Shou Sugi Bahn.</p>
+    <p class="text-center">
+      <a href="/products/modern-wall-tile"><img class="orbit-image" src="/assets/images/unsorted/Norstone-Basalt-Interlocking-Tile-for-wall-cladding.jpg" alt="Norstone Basalt Interlocking Tiles for Modern Kitchens, Backsplashes, Pools, Showers and Retaining Walls" title="Norstone Basalt Interlocking Tiles" /></a>
+    </p>
+    <a href="/products/modern-wall-tile" title="View Norstone's Featured Product" class="x-small color-secondary float-right">View Our Basalt IL Tile System <img width="12" height="9" src="/assets/images/theme/arrows-img.png" alt="arrows-img" title="arrows-img.png" /></a>
+  </div>
+</div>
